@@ -8,30 +8,31 @@
         <title>Trackgenix S.A</title>
         <link rel="stylesheet" href="#">
         <link rel="stylesheet" href="css/stylesheet.css">
-        <link rel="icon" type="image" href="Images/Logo.png"></link>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="icon" type="image" href="Images/Logo.png"></link> 
     </head>
     <body>
-        <header>
+        <header class="header">
             <img src="Images/Shield5Time.jpg" alt="ShieldTime">
             <button>Sign Up</button>
         </header>
         <aside>
-            <nav>
-                <div>
+            <div id="navbar">
+                <nav>
                     Shortcuts
-                </div>
-                <ul>
-                    <li><a href="#Home">Homepage</a></li>
-                    <li><a href="#Welcome">What is Trackgenix?</a></li>
-                    <li><a href="#What-can-i-do">Why choose Trackgenix?</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#touch">get in touch</a></li>
-                    <li><a href="#">Log In</a></li>
-                </ul>
-            </nav>
+                    <ul>
+                        <li><a href="#Home">Homepage</a></li>
+                        <li><a href="#Welcome">What is Trackgenix?</a></li>
+                        <li><a href="#What-can-i-do">Why choose Trackgenix?</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#touch">get in touch</a></li>
+                        <li><a href="#">Log In</a></li>
+                    </ul>
+                </nav>
+            </div>
         </aside>
         <main>
-            <section id="Home"> 
+            <section id="Home" class="container-1"> 
                 <h1>TRACKGENIX</h1>
                 <img src="icons/logo.png" alt="Logo">
                 <img src="images/Celphone.png" alt="Background">
@@ -123,15 +124,15 @@
             </section>
             <section id="touch">
                 <h2>Contact Us</h2>
-                <form>
-                    <div>
+                <form class="my-form"> 
+                    <div class="form-group">
                         <label for="username">Username</label><br>
                         <input type="text" id="username" name="uname" placeholder="Click on me to write">
                     </div>
-                    <div>
+                    <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="mail" placeholder="Click on me to write">
-                    <div>
+                    <div class="form-group">
                         <label for="sector">Sector</label>
                         <select name="sector" id="sector">
                             <option value="SuperAdmin">SuperAdmin</option>
@@ -139,15 +140,15 @@
                             <option value="Proyect-manager">Proyect-manager</option>
                             <option value="Employee">Employee</option>
                           </select>
-                    <div>
+                    <div class="form-group">
                         <label for="phone">PhoneNumber (Optional)</label>
                         <input type="tel" id="phone" name="number" placeholder="Click on me to write">
                     </div>
-                    <div>
+                    <div class="form-group">
                         <label for="message">Type a message</label>
                         <textarea id="message" name="message" placeholder="Click on me to write"></textarea>
                     </div>
-                    <button>Submit</button>
+                    <input class="button" type="submit" value="Submit" name="Submit">
                 </form>
                 <article>
                     <div>
@@ -198,7 +199,7 @@
                 </div>
             </section>
         </main>
-        <footer id="main-footer">
+        <footer id="footer">
             <ul>
                 <li><a href="#"><img src="icons/linkedin.svg" alt="Linkedin"></a></li>
                 <li><a href="#"><img src="icons/twitter.svg" alt="Twitter"></a></li>
