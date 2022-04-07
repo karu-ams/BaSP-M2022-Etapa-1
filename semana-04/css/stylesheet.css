@@ -1,103 +1,46 @@
-body {
-  color: #373867;
-  font-family: Roboto, Arial; 
-  font-size: 20px;
+body{
+  background-color: #fff;
+  font-family: Roboto, monospace;
 }
 
-header {
+#web-container{
+  width: 1440px;
+  margin: 0px auto;
+  border: 1px solid black;
+}
+
+header{
   position: fixed;
+  background: #373867;
   width: 100%;
   height: 91px;
   top: 0px;
-  background-color: #373867;
+  margin: 0px;
   text-align: center;
+  line-height: 91px;
 }
 
-aside {
-  position: fixed; 
-  width: 308px;
-  height: 832px;
-  left: 0px;
-  top: 0px;
-  margin-top: 91px;
-  margin-bottom: 104px;
-  background-color: #AACE9B;
-}
-
-footer {
+footer{
   position: fixed;
+  background: #373867;
+  color:  #AACE9B;
   width: 100%;
   height: 104px;
-  bottom: 0;
-  background-color: #373867;
+  bottom: 0px;
   text-align: center;
+  line-height: 104px;
 }
 
-main {
-  width: 100%;
+footer ul li{
+  display: inline;
+  text-align: center;
+  float: left;
+  opacity: 0.5;
+  padding: 5px;
+}
+
+nav{
+  background-color: #AACE9B;
+  width: 300px;
   height: 835px;
-  margin-top: 90px;
-  padding-left: 308px;
-  box-sizing: border-box;
-}
-
-.green-bottom-border {
-  width: 100%;
-  height: 835px;
-  background-color: #FFF;
-  border-bottom: solid;
-  border-width: 60px;
-  border-color: #49A37B;
-}
-
-h1 {
-  color: #FFF;
-  font-size: 40px;
-  font-weight: 800;
-}
-
-h2 {
-  font-weight: 700;
-  font-size: 40px;
-  font-style: bold;
-  margin: 61px;
-  text-align: center;
-}
-
-h3 {
-  font-weight: 700;
-  font-size: 26px;
-}
-
-.inline-block {
-  display: inline-block;
-  width: 40%;
-  margin: 0% 4%;
-}
-
-.container {
-  display: inline-block;
-  width: 50%;
-}
-
-.box-1 {
-  display: inline-block;
-  width: 50%;
-  padding: 5%;
-}
-
-img.container {
-  display: inline-block;
-  width: 400px;
-  height: 626px;
-  padding: 60px;
-}
-
-#home {
-  background-image: url(../images/Celphone.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-  padding-top: 100px;
 }
