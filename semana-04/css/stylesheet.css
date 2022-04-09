@@ -1,6 +1,26 @@
 body{
   background-color: #fff;
   font-family: Roboto, monospace;
+  color: #373867;
+}
+
+h1 {
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 40px;
+  font-style: bold;
+  margin: 61px;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 26px;
 }
 
 #web-container{
@@ -18,6 +38,14 @@ header{
   margin: 0px;
   text-align: center;
   line-height: 91px;
+}
+
+nav{
+  position: fixed;
+  background-color: #AACE9B;
+  width: 300px;
+  height: 835px;
+  top: 91px;
 }
 
 footer{
@@ -39,8 +67,31 @@ footer ul li{
   padding: 5px;
 }
 
-nav{
-  background-color: #AACE9B;
-  width: 300px;
+#main-content{
+  width: 1140px;
+  margin-top: 90px;
+  margin-left: 300px;
+  text-align: center;
+}
+
+.section{
+  width: 100%;
   height: 835px;
+  border-bottom: solid;
+  border-width: 60px;
+  border-color: #49A37B;
+}
+
+.gray-text{
+  font-size: 30px;
+
+}
+
+#home {
+  background-image: url(../images/Celphone.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding-top: 100px;
 }
