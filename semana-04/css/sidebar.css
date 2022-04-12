@@ -1,3 +1,27 @@
-aside{
-    background: red;
+/* aside{
+    display: none;
+    background-color: #AACE9B;
+    font-size: 20px;
 }
+
+aside a{
+    text-decoration: none;
+    color: #373867;
+}
+
+nav{
+    height: 730px;
+    padding: 10%;
+}
+
+nav li a {
+    display: block;
+    width: 241px;
+    height: 36px;
+    background-color: white;
+    line-height: 36px;
+    margin-top: 23px;
+    border-bottom: 3px solid #373867;
+    padding-left: 10px;
+  }
+ */
