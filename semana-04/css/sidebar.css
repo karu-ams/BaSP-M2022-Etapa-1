@@ -1,7 +1,17 @@
-/* aside{
+aside{
     display: none;
+    position: fixed;
+    top: 90px;
     background-color: #AACE9B;
     font-size: 20px;
+    width: 100%;
+}
+
+aside div{
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 5%;
+    border-bottom: 3px solid #373867;
 }
 
 aside a{
@@ -11,6 +21,7 @@ aside a{
 
 nav{
     height: 730px;
+    width: 300px;
     padding: 10%;
 }
 
@@ -24,4 +35,4 @@ nav li a {
     border-bottom: 3px solid #373867;
     padding-left: 10px;
   }
- */
+
