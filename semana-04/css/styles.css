@@ -1,0 +1,28 @@
+body{
+    font-family: Roboto, Arial;
+    background-color: gray;
+    color: #373867;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden; /* to dont have a scroll bar */
+}
+
+h1{
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 800;
+}
+  
+h2{
+    font-weight: 700;
+    font-size: 40px;
+    font-style: bold;
+}
+  
+h3{
+    font-weight: 700;
+    font-size: 26px;
+}
