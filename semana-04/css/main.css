@@ -1,7 +1,20 @@
 main {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 91px;
+    padding-bottom: 104px;
+}
+
+section{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.green-border-bottom{
+    border-bottom: 60px solid #49A37B;
 }
 
 #home{
@@ -9,20 +22,133 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
     background-image: url(../assets/images/Celphone.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     text-align: center;
-}
-
-#home .container{
-    display: flex;
-    flex-direction: column;
-    min-width: 320px;
+    margin-top: 91px;
+    padding-bottom: 100px;
 }
 
 #home img{
     width: 300px;
+}
+
+#welcome div{
+    padding: 10%;
+    text-align: center;
+}
+
+#welcome img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    padding: 15px;
+}
+
+#welcome p{
+    padding: 10px 0px;
+}
+
+#what-can-i-do img{
+    max-width: 80px;
+}
+
+#what-can-i-do{
+    display: flex;
+}
+
+div.container-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+div.container-3{
+    display: flex;
+    flex-direction: column;
+}
+
+#about-us{
+    display: flex;
+}
+
+#about-us .container img:last-of-type {
+    order: 1;
+    margin: 0;
+}
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin: auto;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 276px;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+}
+
+form input, form select, form textarea {
+    height: 37px;
+    padding-left: 12px;
+    border: 1px solid #373867;
+    border-radius: 4px;
+}
+
+.button{
+    background-color: #AACE9B;
+    display: inline-block;
+    border: none;
+    width: 276px;
+    padding: 0;
+}
+
+#contact-us img{
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    object-fit: cover;
+    padding: 15px;
+}
+
+.container-4{
+    display: flex;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+  }
+
+.box-contact-us{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    padding: 15px 10px;
+}
+
+.box-contact-us div{
+    padding: 15%;
+}
+
+.box-contact-us div ol {
+    list-style-type: circle
+}
+
+.box-contact-us div ol li a{
+    text-decoration: none;
 }
