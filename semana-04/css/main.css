@@ -1,8 +1,6 @@
 main {
     display: block;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 91px;
+    margin-top: 90px;
     padding-bottom: 104px;
 }
 
@@ -32,11 +30,12 @@ section{
 }
 
 #home img{
-    width: 300px;
+    width: 100%;
+    max-width: 330px;
 }
 
 #welcome div{
-    padding: 10%;
+    padding: 35px 25px 16px;
     text-align: center;
 }
 
@@ -44,7 +43,6 @@ section{
     width: 100%;
     max-width: 300px;
     height: auto;
-    object-fit: cover;
     padding: 15px;
 }
 
@@ -54,10 +52,6 @@ section{
 
 #what-can-i-do img{
     max-width: 80px;
-}
-
-#what-can-i-do{
-    display: flex;
 }
 
 div.container-2{
@@ -72,13 +66,17 @@ div.container-3{
     flex-direction: column;
 }
 
-#about-us{
+#about-us .container{
     display: flex;
+    flex-flow: column;
 }
 
-#about-us .container img:last-of-type {
+#about-us .container img:last-of-type{
     order: 1;
-    margin: 0;
+}
+
+#about-us p:last-child {
+    text-align: right;
 }
 
 #contact-form{
@@ -151,4 +149,42 @@ input {
 
 .box-contact-us div ol li a{
     text-decoration: none;
+}
+
+@media screen and (min-width: 480px) {
+
+    #home img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    #welcome {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #welcome .container, #welcome img{
+        flex-basis: 40%;
+    }
+
+    #im-trackgenix .container {
+        flex-basis: 70%;
+    } 
+
+    #what-can-i-do .container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    #what-can-i-do .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    
+    .container-2{
+        flex-basis: 45%;
+    }
 }
