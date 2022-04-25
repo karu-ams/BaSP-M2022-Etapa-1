@@ -1,0 +1,40 @@
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #373867;
+    width: 100%;
+    height: 90px;
+}
+
+header img{
+    width: 45px;
+}
+
+header button img{
+    display: inline-block;
+    border: none;
+    width: 130px;
+    padding: 0;
+}
+
+.nav-bar{
+    width: 80px;
+    border: none;
+    background-color: #373867;
+}
+
+.sign-up-button{
+    background-color: #AACE9B;
+    color: #373867;
+    font-size: 12px;
+    width: 65px;
+    height: 34px;
+    border: none;
+    border-radius: 5%;
+    padding: 10px 5.5px;
+    font-weight: bold;
+    margin-right: 28px;
+}
