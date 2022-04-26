@@ -1,0 +1,76 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    padding-bottom: 104px;
+}
+
+section{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+}
+
+.green-border-bottom{
+    border-bottom: 60px solid #49A37B;
+    width: 100%;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: url(../assets/images/Celphone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 91px;
+    padding-bottom: 100px;
+}
+
+#home img {
+    max-width: 55%;
+}
+
+#welcome {
+    margin-top: 60px;
+    padding-bottom: 60px;
+}
+
+p.first-p {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: rgba(55, 56, 103, 0.7);
+    margin-bottom: 30px;
+}
+
+#welcome p {
+    margin-bottom: 25px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    overflow: hidden;
+}
+
+div.container-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+div.container-3{
+    display: flex;
+    flex-direction: column;
+}

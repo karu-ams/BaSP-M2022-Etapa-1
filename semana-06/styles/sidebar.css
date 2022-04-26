@@ -4,7 +4,9 @@ aside{
     top: 90px;
     background-color: #AACE9B;
     font-size: 20px;
-    width: 100%;
+    min-width: 260px;
+    height: 90%;
+    text-align: left;
 }
 
 aside div{

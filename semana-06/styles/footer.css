@@ -15,7 +15,7 @@ footer{
 
 footer ul{
     display: flex;
-
+    width: auto;
 }
 
 footer ul li{
