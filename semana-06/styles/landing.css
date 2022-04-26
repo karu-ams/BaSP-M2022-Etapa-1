@@ -32,6 +32,7 @@ section{
     background-size: cover;
     padding-top: 91px;
     padding-bottom: 100px;
+    min-height: 600px;
 }
 
 #home img {
@@ -55,6 +56,10 @@ p.first-p {
     margin-bottom: 25px;
 }
 
+#what-can-i-do {
+    text-align: left;
+}
+
 .container{
     display: flex;
     justify-content: space-around;
@@ -73,4 +78,252 @@ div.container-2{
 div.container-3{
     display: flex;
     flex-direction: column;
+    padding: 5%;
+}
+
+#about-us p:first-of-type{
+    text-align: left;
+    padding: 40px 0 40px 0;
+}
+
+#about-us p:last-child {
+    text-align: right;
+    padding: 40px 0 40px 0;
+}
+
+.container-about {
+    display: flex;
+    flex-direction: column;
+}
+
+#about-us .container-about img:last-of-type {
+    order: 1;
+    margin: 0;
+}
+
+#contact-us .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 320px;
+    max-width: 479px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-width: 280px;
+    max-width: 340px;
+    margin-bottom: 50px;
+}
+
+form label {
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    height: 37px;
+    padding-left: 12px;
+    border: 1px solid #373867;
+    border-radius: 4px;
+}
+
+form textarea {
+    min-height: 100px;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+#submit {
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    min-width: 280px;
+    max-width: 340px;
+    padding: 0;
+    background-color: #AACE9B;
+    border: none;
+    border-radius: 5px;
+    color: #373867;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+}
+
+#contact-us article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0 25px 0;
+    text-align: left;
+}
+
+#contact-us .container-4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    min-width: 280px;
+    max-width: 360px;
+    margin-bottom: 80px;
+}
+
+.box-contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+    border-top: 60px solid #49A37B;
+    text-align: left;
+}
+
+.box-contact-us div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+    padding: 10%;
+}
+
+.box-contact-us div ol li a {
+    text-decoration: none;
+    color:#373867;
+}
+
+@media screen and (min-width: 480px) {
+
+    #home img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    #welcome {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #welcome .container, #welcome img{
+        flex-basis: 40%;
+    }
+
+    #im-trackgenix .container {
+        flex-basis: 70%;
+    } 
+
+    #what-can-i-do .container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    #what-can-i-do .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    
+    .container-2{
+        flex-basis: 45%;
+    }
+
+    #about-us .container-about {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #about-us .container-about p {
+        flex-basis: 50%;
+        margin-bottom: 20px;
+    }
+
+    #about-us .container-about img {
+        flex-basis: 48%;
+        width: 10%;
+        height: auto;
+        margin: 0;
+    }
+
+    #about-us .container-about img:last-of-type {
+        order: 0;
+        margin-bottom: 0;
+    }
+
+    #contact-us .container {
+        flex-direction: row;
+        justify-content: space-between;
+        min-width: 480px;
+        max-width: 767px;
+    }
+
+    #contact-us form {
+        flex-basis: 30%;
+        align-items: flex-end;
+    }
+
+    #contact-us address {
+        flex-basis: 30%;
+    }
+
+    .box-contact-us {
+        flex-direction: row;
+    }
+}
+/*
+@media screen and (min-width: 768px) {
+
+    section {
+        padding: 2%;
+    }
+
+}
+*/
+@media screen and (min-width: 1024px) {
+
+    aside {
+        display: flex;
+    }
+
+    main {
+        margin-left: 300px;
+    }
+
+    section {
+        padding: 2%;
+    }
+
+    #about-us .container img {
+        max-width: 360px;
+    }
+
+    .pbs h4 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .pbs ol {
+        padding-left: 23px;
+        font-size: 20px;
+        line-height: 23px;
+    }
+
 }

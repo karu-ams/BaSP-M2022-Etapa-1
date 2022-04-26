@@ -17,7 +17,9 @@
         <header>
             <button class="nav-bar"><img src="../assets/icons/burger-button.jpg" alt="burger-button"></button>
             <img src="../assets/icons/Interface-Security-Shield-5.png" alt="logo">
-            <button class="sign-up-button">Sign Up</button>
+            <a href="../views/sign-up.html">
+                <button class="sign-up-button">Sign Up</button>
+            </a>
         </header>
         <aside>
             <nav>
@@ -28,7 +30,7 @@
                     <li><a href="#What-can-i-do">Why choose Trackgenix?</a></li>
                     <li><a href="#about-us">About Us</a></li>
                     <li><a href="#in-touch">Get in touch</a></li>
-                    <li><a href="#">Log In</a></li>
+                    <li><a href="../views/login.html">Log In</a></li>
                 </ul>
             </nav>
         </aside>
@@ -148,7 +150,7 @@
             </section>
             <section id="contact-us">
                 <h2>Contact Us</h2>
-                <div class="container green-border-bottom">
+                <div class="container">
                     <form id="contact-form"> 
                         <div class="form-group">
                             <label for="username">Username</label>
@@ -175,7 +177,7 @@
                             <label for="message">Type a message</label>
                             <textarea id="message" name="message" placeholder="Click on me to write"></textarea>
                         </div>
-                        <input class="button" type="submit" value="Submit" name="Submit">
+                        <input id="submit" class="button" type="submit" value="Submit" name="Submit">
                     </form>
                     <article>
                         <div class="container-4">
