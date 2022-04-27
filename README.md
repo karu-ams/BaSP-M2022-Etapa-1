@@ -4,14 +4,14 @@ This is a website developed for those who wants to keep easily a register of the
 ```
 To launch the website, just double click on the index.html document. 
 ```
-## Semana 03
+## WEEK 03
 CSS styles corresponding to the HTML structure of week 02.
 
-## Semana 04
+## WEEK 04
 Mobile First Design Responsive Flexbox
 https://karu-ams.github.io/BaSP-M2022-Etapa-1/semana-04/index.html
 
-## Semana 05
+## WEEK 05
 - Index.html in semana-04 improved in base of last week corrections:
 https://karu-ams.github.io/BaSP-M2022-Etapa-1/semana-04/index.html
 
@@ -23,4 +23,9 @@ https://karu-ams.github.io/BaSP-M2022-Etapa-1/semana-04/index.html
     05_for.js
     06_functions.js
 https://karu-ams.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
+
+## WEEK 06
+JavaScript funcionality added to the proyect. Corrections in semana-04 done. Follow the link and see ->
+https://karu-ams.github.io/BaSP-M2022-Etapa-1/semana-06/views/
+
 ## Karen Soto
