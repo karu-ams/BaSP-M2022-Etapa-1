@@ -28,11 +28,11 @@ window.onload = function() {
     function validateEmail () {
         var isValid = emailFormat.test(email.value);
         if(isValid == true){
-            console.log('Valid email.')
+            console.log('Valid email.') /// ver de sacar
             errorEmail.classList.add('error-inv')
             errorEmail.classList.replace('error-input','error-inv')
         } else {
-            console.log('Sorry. The email is not valid.')
+            console.log('Sorry. The email is not valid.') /// ver de sacar
             errorEmail.classList.add('error-input')
             errorEmail.classList.replace('error-inv', 'error-input')
         }
