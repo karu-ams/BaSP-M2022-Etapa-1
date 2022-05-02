@@ -28,4 +28,8 @@ https://karu-ams.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
 JavaScript funcionality added to the proyect. Corrections in semana-04 done. Follow the link and see ->
 https://karu-ams.github.io/BaSP-M2022-Etapa-1/semana-06/views/
 
+## WEEK 07
+Javascript. We made requests to the RR API using fetch, but it'll work only if all validations are ok.
+https://karu-ams.github.io/BaSP-M2022-Etapa-1/Semana-07/views/index.html
+
 ## Karen Soto

@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Roboto, monospace;
+    background-color: white;
+    color: #373867;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+}
+/*
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    overflow: hidden;
+}
+*/
+h1 {
+    margin: 0 0 10px 0;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 47px; 
+    color: #ffffff;
+    text-transform: uppercase;
+}
+  
+h2{
+    font-weight: 700;
+    font-size: 40px;
+    font-style: bold;
+    line-height: 47px;
+    margin: 0px 0px 30px 0px;
+}
+  
+h3{
+    font-weight: 700;
+    font-size: 22px;
+}
+
+h4{
+    font-weight: bold;
+    font-size: 30px;
+}
+img {
+    width: 100%;
+    height: auto;
+  }
