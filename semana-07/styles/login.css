@@ -3,6 +3,24 @@ body {
     flex-direction: column;
 }
 
+.error-inv {
+    visibility: hidden;
+}
+
+.error-input {
+    visibility: visible;
+    color: red;
+}
+
+/*    #email-error {
+    visibility: hidden;
+}
+
+.error-input {
+    visibility: flex;
+    color: red;
+}*/
+
 main {
     display: flex;
     justify-content: center;
