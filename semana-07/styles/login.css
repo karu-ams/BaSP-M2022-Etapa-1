@@ -3,12 +3,15 @@ body {
     flex-direction: column;
 }
 
+.container{
+    width: 70%;
+}
 .error-inv {
-    visibility: hidden;
+    display: none;
 }
 
 .error-input {
-    visibility: visible;
+    display: block;
     color: red;
 }
 
@@ -63,6 +66,7 @@ input {
     padding: 10px;
     border: 1px solid #373867;
     border-radius: 4px;
+    width: 100%;
 }
 
 #submit {
