@@ -29,49 +29,60 @@
                         <div class="form-data">
                             <label for="first-name" class="heading-2">First name</label>
                             <input id="first-name" type="text" name="first-name" placeholder="First name">
+                            <div id="first-name-error" class="error-inv">Name should only contain letters and at least 3 characters.</div>
                         </div>
                         <div class="form-data">
                             <label for="last-name" class="heading-2">Last name</label>
                             <input id="last-name" type="text" name="last-name" placeholder="Last name">
+                            <div id="last-name-error" class="error-inv">Last name should only contain letters and at least 3 characters.</div>
                         </div>
                         <div class="form-data">
-                            <label for="id-number" class="heading-2">Id. number</label>
+                            <label for="id-number" class="heading-2">ID number</label>
                             <input id="id-number" type="number" name="id-number" placeholder="xxxxxxxx">
+                            <div id="id-number-error" class="error-inv">ID should contain at least 8 characters.</div>
                         </div>
                         <div class="form-data">
                             <label for="birth-date" class="heading-2">Date of birth</label>
                             <input id="birth-date" type="date" name="birth-date">
+                            <div id="birth-date-error" class="error-inv">You must be +18 years.</div>
                         </div>
                         <div class="form-data">
                             <label for="phone-number" class="heading-2">Phone number</label>
                             <input id="phone-number" type="tel" name="phone-number" placeholder="With area code ">
+                            <div id="phone-number-error" class="error-inv">Phone number must have 10 number characters.</div>
                         </div>
                         <div class="form-data">
                             <label for="home-address" class="heading-2">Address</label>
                             <input id="home-address" type="text" name="home-address" placeholder="Streetname 1234">
+                            <div id="home-address-error" class="error-inv">Address must have at least 5 characters and contain letters, numbers and a space between</div>
                         </div>
                         <div class="form-data">
                             <label for="city" class="heading-2">City</label>
                             <input id="city" type="text" name="city" placeholder="Rosario">
+                            <div id="city-error" class="error-inv">City name must have at least 3 characters and contain letters.</div>
                         </div>
                         <div class="form-data">
                             <label for="postal-code" class="heading-2">Postal Code</label>
                             <input id="postal-code" type="number" name="postal-code" placeholder="p.e 2000">
+                            <div id="postal-code-error" class="error-inv">Postal Code must have 4 o 5 number characters.</div>
                         </div>
                         <div class="form-data">
                             <label for="email" class="heading-2">Email</label>
                             <input id="email" type="email" name="email" placeholder="your@email.com">
+                            <div id="email-error" class="error-inv">The email is not valid.</div>
                         </div>
                         <div class="form-data">
                             <label for="password" class="heading-2">Password</label>
-                            <input id="password" type="text" name="passwrord">
+                            <input id="password" type="password" name="passwrord">
+                            <div id="password-error" class="error-inv">Invalid. Password must contain at least 8 numbers and letters.</div>
                         </div>
                         <div class="form-data">
                             <label for="password-rpt" class="heading-2">Repeat password</label>
-                            <input id="password-rpt" type="text" name="passwrord-rpt">
+                            <input id="password-repeat" type="password" name="passwrord-repeat">
+                            <div id="password-repeat-error" class="error-inv">Invalid. You must repeat the password so both match.</div>
                         </div>
                     </div>
-                    <input id="submit" type="submit" value="Create" class="heading-2">
+                    <input id="create" type="button" value="Create" class="heading-2">
                 </form>
             </div>
         </div>

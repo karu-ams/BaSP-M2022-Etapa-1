@@ -301,12 +301,34 @@ window.onload = function() {
             var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup';
             var keylist = ["name", "lastName", "dni", "dob", "phone", "address", "city", "zip", "email",
             "password"];
-            var valuelist = [firstName.value, lastName.value, dni.value, changeYYMMDD(inputBirthDate.value), 
+            var valuelist = [firstName.value, lastName.value, dni.value, changeMMDDYY(inputBirthDate.value), 
             phoneNum.value, address.value, city.value, postalCode.value, email.value, password.value];
 
             fetchSignUp(url, keylist, valuelist);
-            alert('The mail is: '+email.value+'\nThe password is: '+password.value);
+            alert('The name is: '+firstName.value+
+            '\nThe last name is: '+lastName.value+
+            '\nThe ID is: '+dni.value+
+            '\nThe birth date is: '+inputBirthDate.value+
+            '\nThe phone number is: '+phoneNum.value+
+            '\nThe address is: '+address.value+
+            '\nThe city is: '+city.value+
+            '\nThe postal code is: '+postalCode.value+
+            '\nThe mail is: '+email.value+
+            '\nThe password is: '+password.value);
         }
+    }
+    if(localStorage.getItem('id') != null) {
+        firstName.value = localStorage.getItem('Name');
+        lastName.value = localStorage.getItem('Surname');
+        dni.value = localStorage.getItem('dni');
+        inputBirthDate.value = localStorage.getItem('Date of birth');
+        phoneNum.value = localStorage.getItem('Phone');
+        address.value = localStorage.getItem('Address');
+        city.value = localStorage.getItem('City');
+        postalCode.value = localStorage.getItem('Postal Code');
+        email.value = localStorage.getItem('Email');
+        password.value = localStorage.getItem('Password');
+        repeatPassword.value = localStorage.getItem('Password'); 
     }
 }
 ///// AUXILIAR FUNCTIONS /////
@@ -322,6 +344,7 @@ function haveOnlyLetters(str) {
     }
     return areLetters;
 }
+
 function haveOnlyNumbers(str) {
     var numbers = '1234567890';
     var areNumbers = false;
@@ -334,7 +357,7 @@ function haveOnlyNumbers(str) {
     }
     return areNumbers;
 }
-//
+
 function haveNumAndLett (str) {
     var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZáéíóúÁÉÍÓÚ'
     var numbers = '1234567890'
@@ -351,7 +374,7 @@ function haveNumAndLett (str) {
     }
     return (areLetters && areNumbers);
 }
-//
+
 function haveNumLettSpace(str) {
     var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZáéíóúÁÉÍÓÚ';
     var numbers = '1234567890';
@@ -389,18 +412,28 @@ function couldHaveNumLettSpace(str) {
     }
     return true;
 }
+
 function isFullAge(date) {  
     var inputDate = new Date(date);
     var thisMoment = new Date(Date.now());
   
     return new Date(thisMoment - inputDate).getFullYear() - 1970 >= 18;
 }
-function changeYYMMDD(date){
+
+function changeMMDDYY(date){
     var day = date.substring(8,10);
     var month = date.substring(5,7);
     var year = date.substring(0,4);
     return month+'/'+day+'/'+year;
 }
+
+function changeYYMMDD(date){
+    var day = date.substring(3,5);
+    var month = date.substring(0,2);
+    var year = date.substring(6,10);
+    return year+'-'+month+'-'+day;
+}
+
 function fetchSignUp(url, keylist, valuelist) {
     var keyValueArr = []
     for (var i = 0; i < keylist.length ; i++) {
@@ -414,9 +447,26 @@ function fetchSignUp(url, keylist, valuelist) {
             return response.json();
         })
         .then(function(jsonResponse){ //// agregar IF para que me de mensaje success
+            if(jsonResponse.success){
+                storeData(jsonResponse);
+            }
             alert(jsonResponse.msg);
         })
         .catch(function(error){ ///siempre termina con catch
             console.log(error);
         })
+}
+
+function storeData(response) {
+    localStorage.setItem('id',response.data.id)
+    localStorage.setItem('Name',response.data.name);
+    localStorage.setItem('Surname',response.data.lastName);
+    localStorage.setItem('dni',response.data.dni);
+    localStorage.setItem('Date of birth',changeYYMMDD(response.data.dob));
+    localStorage.setItem('Phone',response.data.phone);
+    localStorage.setItem('Address',response.data.address);
+    localStorage.setItem('City',response.data.city);
+    localStorage.setItem('Postal Code',response.data.zip);
+    localStorage.setItem('Email',response.data.email);
+    localStorage.setItem('Password',response.data.password);
 }
