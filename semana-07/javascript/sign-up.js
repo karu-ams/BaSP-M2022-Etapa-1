@@ -78,22 +78,32 @@ window.onload = function() {
         errorDni.classList.replace('error-input','error-inv');
     }
 
-/*     ///// DATE OF BIRTH /////
+    ///// DATE OF BIRTH /////
     // DATE OF BIRTH -> Variables //
-    var birthDate = document.getElementById('birth-date');
+    var inputBirthDate = document.getElementById('birth-date');
+
     // DATE OF BIRTH -> Error alerts //
     var errorBirthDate = document.getElementById('birth-date-error');
+
     // DATE OF BIRTH -> Events //
-    birthDate.addEventListener('blur', validateBirthDate);
-    birthDate.addEventListener('focus', birthDateFocus);
+    inputBirthDate.addEventListener('blur', validateBirthDate);
+    inputBirthDate.addEventListener('focus', birthDateFocus);
+
     // DATE OF BIRTH -> Functions //
-    function isFullAge(date) {  
-        var birthDate = new Date(date);
-        var thisMoment = new Date(Date.now());
-      
-        return new Date(thisMoment - inputDate).getFullYear() - 1970 >= 18;
+    function validateBirthDate() {
+        if(isFullAge(inputBirthDate.value)) {
+            console.log('Birthdate is correct')
+            return true;
+        } else {
+            console.log('Birthdate is incorrect.')
+            errorBirthDate.classList.add('error-input');
+            return false;
+        }
+    } 
+    function birthDateFocus() {
+        errorBirthDate.classList.replace('error-input','error-inv');
     }
- */
+
     ///// PHONE NUMER /////
     // PHONE NUMBER -> Variables //
     var phoneNum = document.getElementById('phone-number');
@@ -199,11 +209,14 @@ window.onload = function() {
     // EMAIL -> Variables //
     var email = document.getElementById('email');
     var emailFormat = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+
     // EMAIL -> Error alerts //
     var errorEmail = document.getElementById('email-error');
+
     // EMAIL -> Events //
     email.addEventListener('blur', validateEmail);
     email.addEventListener('focus', emailFocus);
+
     // EMAIL -> Functions //
     function validateEmail() {
         var isValid = emailFormat.test(email.value);
@@ -276,9 +289,25 @@ window.onload = function() {
     ///// CREATE /////
     // CREATE -> Variables //
     var createButton = document.getElementById('create');
-    // CREATE -> Error alerts //
+
     // CREATE -> Events //
+    createButton.addEventListener('click', submitSignUp);
+
     // CREATE -> Functions //
+    function submitSignUp() {
+        if (validateFirstName() && validateLastName() && validateDni() && validateBirthDate() 
+        && validatePhoneNum() && validateAddress() && validateCity() && validatePostalCode() 
+        && validateEmail() && validatePassword() && validateRepeatPassword()) {
+            var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup';
+            var keylist = ["name", "lastName", "dni", "dob", "phone", "address", "city", "zip", "email",
+            "password"];
+            var valuelist = [firstName.value, lastName.value, dni.value, changeYYMMDD(inputBirthDate.value), 
+            phoneNum.value, address.value, city.value, postalCode.value, email.value, password.value];
+
+            fetchSignUp(url, keylist, valuelist);
+            alert('The mail is: '+email.value+'\nThe password is: '+password.value);
+        }
+    }
 }
 ///// AUXILIAR FUNCTIONS /////
 function haveOnlyLetters(str) {
@@ -359,4 +388,35 @@ function couldHaveNumLettSpace(str) {
         }
     }
     return true;
+}
+function isFullAge(date) {  
+    var inputDate = new Date(date);
+    var thisMoment = new Date(Date.now());
+  
+    return new Date(thisMoment - inputDate).getFullYear() - 1970 >= 18;
+}
+function changeYYMMDD(date){
+    var day = date.substring(8,10);
+    var month = date.substring(5,7);
+    var year = date.substring(0,4);
+    return month+'/'+day+'/'+year;
+}
+function fetchSignUp(url, keylist, valuelist) {
+    var keyValueArr = []
+    for (var i = 0; i < keylist.length ; i++) {
+        keyValueArr.push(keylist[i].concat('=', valuelist[i]));
+    }
+    var queryParams = keyValueArr.join('&');
+    var fetchURL = url.concat('?', queryParams);
+
+    fetch (fetchURL)
+        .then(function(response){ ///tiene que tener un then que transforme a json el obj
+            return response.json();
+        })
+        .then(function(jsonResponse){ //// agregar IF para que me de mensaje success
+            alert(jsonResponse.msg);
+        })
+        .catch(function(error){ ///siempre termina con catch
+            console.log(error);
+        })
 }
