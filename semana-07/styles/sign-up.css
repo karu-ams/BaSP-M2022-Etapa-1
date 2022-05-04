@@ -3,6 +3,17 @@ body {
     flex-direction: column;
 }
 
+.error-inv {
+    display: none;
+}
+
+.error-input {
+    display: block;
+    color: red;
+    font-size: 15px;
+    padding-top: 1%;
+}
+
 main {
     display: flex;
     justify-content: center;
